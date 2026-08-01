@@ -1,0 +1,7 @@
+condition,inpatient_claims,average_length_of_stay,average_claim_payment
+Chronic Kidney Disease,40077,6.04,10137.41
+Heart Failure,48262,5.74,9668.86
+Ischemic Heart Disease,56328,5.60,9638.87
+Diabetes,51690,5.63,9501.30
+COPD,32621,5.84,9462.06
+Depression,32715,5.77,9219.48

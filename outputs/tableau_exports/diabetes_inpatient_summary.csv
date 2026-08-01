@@ -1,0 +1,3 @@
+diabetes_status,inpatient_claims,average_length_of_stay,average_claim_payment,total_claim_payments
+Diabetes,51690,5.63,9501.30,491122070.00
+No Diabetes,14857,5.33,9781.19,145319110.00

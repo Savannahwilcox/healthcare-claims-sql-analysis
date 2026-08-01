@@ -233,3 +233,44 @@ GROUP BY age_group
 ORDER BY outpatient_claims DESC;
 
 \o
+
+-- 5. Year-over-year outpatient claim change.
+
+\o outputs/tableau_exports/year_over_year_claims.csv
+
+WITH yearly_claims AS (
+    SELECT
+        EXTRACT(YEAR FROM claim_from_date)::INTEGER AS claim_year,
+        COUNT(*) AS claim_count
+    FROM outpatient_claims
+    WHERE claim_from_date >= DATE '2008-01-01'
+      AND claim_from_date < DATE '2011-01-01'
+    GROUP BY EXTRACT(YEAR FROM claim_from_date)
+),
+
+yearly_change AS (
+    SELECT
+        claim_year,
+        claim_count,
+        LAG(claim_count) OVER (
+            ORDER BY claim_year
+        ) AS prior_year_claim_count
+    FROM yearly_claims
+)
+
+SELECT
+    claim_year,
+    claim_count,
+    prior_year_claim_count,
+
+    ROUND(
+        100.0 * (
+            claim_count - prior_year_claim_count
+        ) / NULLIF(prior_year_claim_count, 0),
+        1
+    ) AS percent_change
+
+FROM yearly_change
+ORDER BY claim_year;
+
+\o
