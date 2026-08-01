@@ -1,0 +1,34 @@
+column_name,data_type,description,source_column
+beneficiary_id,TEXT,Synthetic unique beneficiary identifier,DESYNPUF_ID
+summary_year,INTEGER,Year represented by the beneficiary summary record,Added during loading
+birth_date,DATE,Beneficiary date of birth,BENE_BIRTH_DT
+death_date,DATE,Beneficiary date of death when available,BENE_DEATH_DT
+sex_code,INTEGER,CMS beneficiary sex code,BENE_SEX_IDENT_CD
+race_code,INTEGER,CMS beneficiary race code,BENE_RACE_CD
+esrd_indicator,TEXT,End-stage renal disease indicator,BENE_ESRD_IND
+state_code,TEXT,Beneficiary state code,SP_STATE_CODE
+county_code,TEXT,Beneficiary county code,BENE_COUNTY_CD
+hospital_insurance_months,INTEGER,Months of Medicare Part A coverage,BENE_HI_CVRAGE_TOT_MONS
+medical_insurance_months,INTEGER,Months of Medicare Part B coverage,BENE_SMI_CVRAGE_TOT_MONS
+hmo_coverage_months,INTEGER,Months enrolled in an HMO,BENE_HMO_CVRAGE_TOT_MONS
+prescription_plan_months,INTEGER,Months of prescription-drug-plan coverage,PLAN_CVRG_MOS_NUM
+alzheimer_indicator,INTEGER,Alzheimer disease or related disorder flag,SP_ALZHDMTA
+heart_failure_indicator,INTEGER,Heart failure chronic-condition flag,SP_CHF
+chronic_kidney_disease_indicator,INTEGER,Chronic kidney disease flag,SP_CHRNKIDN
+cancer_indicator,INTEGER,Cancer chronic-condition flag,SP_CNCR
+copd_indicator,INTEGER,COPD chronic-condition flag,SP_COPD
+depression_indicator,INTEGER,Depression chronic-condition flag,SP_DEPRESSN
+diabetes_indicator,INTEGER,Diabetes chronic-condition flag,SP_DIABETES
+ischemic_heart_disease_indicator,INTEGER,Ischemic heart disease flag,SP_ISCHMCHT
+osteoporosis_indicator,INTEGER,Osteoporosis chronic-condition flag,SP_OSTEOPRS
+rheumatoid_arthritis_indicator,INTEGER,Rheumatoid arthritis or osteoarthritis flag,SP_RA_OA
+stroke_tia_indicator,INTEGER,Stroke or transient ischemic attack flag,SP_STRKETIA
+inpatient_medicare_reimbursement,"NUMERIC(12,2)",Annual inpatient Medicare reimbursement,MEDREIMB_IP
+inpatient_beneficiary_responsibility,"NUMERIC(12,2)",Annual inpatient beneficiary responsibility,BENRES_IP
+inpatient_primary_payer_payment,"NUMERIC(12,2)",Annual inpatient primary-payer payment,PPPYMT_IP
+outpatient_medicare_reimbursement,"NUMERIC(12,2)",Annual outpatient Medicare reimbursement,MEDREIMB_OP
+outpatient_beneficiary_responsibility,"NUMERIC(12,2)",Annual outpatient beneficiary responsibility,BENRES_OP
+outpatient_primary_payer_payment,"NUMERIC(12,2)",Annual outpatient primary-payer payment,PPPYMT_OP
+carrier_medicare_reimbursement,"NUMERIC(12,2)",Annual carrier Medicare reimbursement,MEDREIMB_CAR
+carrier_beneficiary_responsibility,"NUMERIC(12,2)",Annual carrier beneficiary responsibility,BENRES_CAR
+carrier_primary_payer_payment,"NUMERIC(12,2)",Annual carrier primary-payer payment,PPPYMT_CAR

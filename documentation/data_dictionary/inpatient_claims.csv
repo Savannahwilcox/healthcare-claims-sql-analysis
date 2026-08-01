@@ -1,0 +1,27 @@
+column_name,data_type,description,source_column
+beneficiary_id,TEXT,Synthetic beneficiary identifier,DESYNPUF_ID
+claim_id,TEXT,Synthetic inpatient claim identifier,CLM_ID
+segment,INTEGER,Claim segment number,SEGMENT
+claim_from_date,DATE,Beginning date of the claim with admission-date fallback,CLM_FROM_DT
+claim_through_date,DATE,Ending date of the claim with discharge-date fallback,CLM_THRU_DT
+provider_number,TEXT,Synthetic institutional provider identifier,PRVDR_NUM
+claim_payment_amount,"NUMERIC(12,2)",Medicare payment amount for the claim,CLM_PMT_AMT
+primary_payer_payment_amount,"NUMERIC(12,2)",Amount paid by another primary payer,NCH_PRMRY_PYR_CLM_PD_AMT
+attending_physician_npi,TEXT,Attending physician identifier,AT_PHYSN_NPI
+operating_physician_npi,TEXT,Operating physician identifier,OP_PHYSN_NPI
+other_physician_npi,TEXT,Other physician identifier,OT_PHYSN_NPI
+admission_date,DATE,Hospital admission date,CLM_ADMSN_DT
+discharge_date,DATE,Beneficiary discharge date,NCH_BENE_DSCHRG_DT
+admitting_diagnosis_code,TEXT,Diagnosis recorded at admission,ADMTNG_ICD9_DGNS_CD
+drg_code,TEXT,Diagnosis-related group code,CLM_DRG_CD
+utilization_day_count,INTEGER,Number of inpatient utilization days,CLM_UTLZTN_DAY_CNT
+pass_through_per_diem_amount,"NUMERIC(12,2)",Pass-through per-diem payment amount,CLM_PASS_THRU_PER_DIEM_AMT
+inpatient_deductible_amount,"NUMERIC(12,2)",Beneficiary inpatient deductible amount,NCH_BENE_IP_DDCTBL_AMT
+coinsurance_liability_amount,"NUMERIC(12,2)",Beneficiary Part A coinsurance liability,NCH_BENE_PTA_COINSRNC_LBLTY_AM
+blood_deductible_liability_amount,"NUMERIC(12,2)",Beneficiary blood-deductible liability,NCH_BENE_BLOOD_DDCTBL_LBLTY_AM
+diagnosis_code_1,TEXT,Primary ICD-9 diagnosis code,ICD9_DGNS_CD_1
+diagnosis_code_2,TEXT,Secondary ICD-9 diagnosis code,ICD9_DGNS_CD_2
+diagnosis_code_3,TEXT,Third ICD-9 diagnosis code,ICD9_DGNS_CD_3
+procedure_code_1,TEXT,Primary ICD-9 procedure code,ICD9_PRCDR_CD_1
+procedure_code_2,TEXT,Secondary ICD-9 procedure code,ICD9_PRCDR_CD_2
+procedure_code_3,TEXT,Third ICD-9 procedure code,ICD9_PRCDR_CD_3
