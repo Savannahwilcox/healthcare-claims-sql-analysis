@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# PostgreSQL backups
+*.dump
+*.backup
+
+# Raw and processed data files
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.gz
+data/processed/*.csv
+
+# Keep empty data folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
