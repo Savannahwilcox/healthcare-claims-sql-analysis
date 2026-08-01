@@ -1,0 +1,4 @@
+claim_year,inpatient_claims,outpatient_claims,avg_inpatient_payment,avg_outpatient_payment,total_inpatient_payments,total_outpatient_payments,avg_length_of_stay
+2008,27701,282896,9315.51,258.54,258048880.00,73141190.00,5.63
+2009,25264,322358,9716.35,272.90,245473970.00,87972330.00,5.60
+2010,13582,173971,9786.36,275.41,132918330.00,47913710.00,5.35

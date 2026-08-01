@@ -1,0 +1,5 @@
+age_group,inpatient_claims,average_length_of_stay,average_claim_payment
+65-74,21718,5.49,9725.45
+75-84,20950,5.54,9659.22
+85+,12283,5.61,9350.98
+Under 65,11596,5.70,9313.98
